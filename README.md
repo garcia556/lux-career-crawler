@@ -4,9 +4,9 @@ While waiting for a new position in Luxoft I got too bored monitoring different 
 
 ## Prerequisites
 
+- \*NIX-like OS (tested successfully on macOS and Ubuntu Server) with terminal
 - bash
 - docker
-- \*NIX-like OS (tested successfully on macOS and Ubuntu Server)
 
 ## Usage
 
@@ -14,8 +14,8 @@ While waiting for a new position in Luxoft I got too bored monitoring different 
 ./run.sh ${FILTER_CSV}
 ```
 
-During first run the script will install necessary node modules as well as fetch docker node image.
-`${FILTER_CSV}` is an optional parameter passing file name where lookup URLs can be found. By default `filter.csv` file is used, there are the filters I was interested in.
+During first run the script will install required node modules as well as fetch docker node image.
+`${FILTER_CSV}` is optional parameter passing file name where lookup URLs can be found. By default `filter.csv` file is used, there are the filters in it I was interested in at that time.
 
 ### Filter file example
 
@@ -28,12 +28,12 @@ SL3,https://career.luxoft.com/job-opportunities/?arrFilter_ff%5BNAME%5D=&arrFilt
 It corresponds to the following fields:
 
 Index | Field           | Description
------ | :-------------: | -----------
+----- | --------------- | -----------
 1     | Label           | Just a title of selection option for convenience
-2     | Search URL      | Flter URL from the [careers page](https://career.luxoft.com/job-opportunities/)
+2     | Search URL      | Filter URL from the careers page
 3     | Pages to lookup | How many pages to process back in time, page size is *10* positions
 
-##### Additional filters
+#### Additional filters
 
-Simply go to the [careers page](https://career.luxoft.com/job-opportunities/) in the browser, configure the filter and press **Search** to get the results and copy the URL from the address bar, it can be used as is. Ensure you are on the 1st page of search results..
+Simply go to the [careers page](https://career.luxoft.com/job-opportunities/) in the browser, configure the filter, press **Search** to get the results and copy the URL from the address bar, it can be used as is. Ensure you are on the 1st page of search results.
 

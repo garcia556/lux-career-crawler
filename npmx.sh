@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGE="alpine"
+IMAGE="9.1.0-alpine"
 
 mode=$1
 cmd="-v"
