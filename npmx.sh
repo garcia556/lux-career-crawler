@@ -11,10 +11,10 @@ if [ -z "${mode}" ]; then
 else
 	case ${mode} in
 		"u") # update
-			cmd="update --save"
+			cmd="update --save --silent"
 			;;
 		"i") # install package
-			cmd="install $2 --save"
+			cmd="install $2 --save --silent"
 			;;
 		"r") # run
 			shift

@@ -3,7 +3,7 @@
 DB=$1
 
 if [ -z "${DB}" ]; then
-	DB="url.db"
+	DB="filter.csv"
 fi
 
 DB_DELIM=","
