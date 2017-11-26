@@ -22,9 +22,6 @@ IFS="
 "
 COLUMNS=20
 
-# ensure all modules are installed
-./npmx.sh u
-
 PS3="Choose search option: "
 select opt in ${options}
 do
@@ -39,7 +36,9 @@ do
 			pgs=$(echo "${line}" | cut -d ${DB_DELIM} -f ${DB_IX_PAGES})
 
 			echo ""
-			./npmx.sh r "${url}" "${pgs}" | column -s "|" -c 4 -t
+			RUN="./docker-spin-up/node.sh"
+			${RUN} i cheerio csv-stringify request request-promise-native
+			${RUN} r "${url}" "${pgs}" | column -s "|" -c 4 -t
 			break
 			;;
 	esac

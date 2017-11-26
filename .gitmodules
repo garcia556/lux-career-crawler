@@ -1,0 +1,3 @@
+[submodule "docker-spin-up"]
+	path = docker-spin-up
+	url = https://github.com/garcia556/docker-spin-up.git
